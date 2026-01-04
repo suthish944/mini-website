@@ -8,7 +8,6 @@
         body {
             background-color: #050510; 
             color: white;
-            /* Headings stay sans-serif, but body defaults to Times New Roman */
             font-family: "Times New Roman", Times, serif; 
             margin: 0;
             display: flex;
@@ -19,7 +18,6 @@
             box-sizing: border-box;
         }
 
-        /* The Universe Stage */
         #universe {
             position: fixed;
             top: 0;
@@ -31,7 +29,6 @@
             overflow: hidden;
         }
 
-        /* The Star (The Imported Item) */
         .star {
             position: absolute;
             background: white;
@@ -46,7 +43,6 @@
             to { transform: scale(1.5) translateY(100vh); opacity: 0; }
         }
 
-        /* Layout Boxes */
         .profile-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -58,15 +54,27 @@
             box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
         }
 
-        /* Keeping Heading Fonts Modern */
         h1, h3, .subtitle {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* NEW ATTRACTIVE GLOW EFFECT */
         h1 {
-            text-shadow: 0 0 10px #fff, 0 0 20px #00d4ff;
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             margin-bottom: 5px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: neonPulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes neonPulse {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00d4ff, 0 0 40px #00d4ff, 0 0 50px #00d4ff;
+            }
+            to {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 35px #ff00de;
+            }
         }
 
         .subtitle {
@@ -83,7 +91,6 @@
             margin-bottom: 20px;
         }
 
-        /* Paragraphs and Details in Times New Roman */
         p, li, .contact-info {
             font-size: 1.1rem;
             line-height: 1.6;
