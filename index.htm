@@ -58,23 +58,32 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* NEW ATTRACTIVE GLOW EFFECT */
+        /* SHIMMERING CRYSTAL EFFECT */
         h1 {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             margin-bottom: 5px;
-            color: #fff;
+            font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            animation: neonPulse 2s ease-in-out infinite alternate;
+            letter-spacing: 6px;
+            background: linear-gradient(
+                -45deg, 
+                #fff 25%, 
+                #00d4ff 40%, 
+                #fff 50%, 
+                #00d4ff 60%, 
+                #fff 75%
+            );
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: crystalShine 4s ease-in-out infinite;
+            filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
         }
 
-        @keyframes neonPulse {
-            from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00d4ff, 0 0 40px #00d4ff, 0 0 50px #00d4ff;
-            }
-            to {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 35px #ff00de;
-            }
+        @keyframes crystalShine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .subtitle {
