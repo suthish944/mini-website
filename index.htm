@@ -61,31 +61,27 @@
         }
 
         /* SHIMMERING CRYSTAL EFFECT */
-h1 {
-    font-size: clamp(2rem, 8vw, 3.5rem); 
-    margin-bottom: 5px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    background: linear-gradient(
-        -45deg, 
-        #fff 25%, 
-        #00d4ff 40%, 
-        #fff 50%, 
-        #00d4ff 60%, 
-        #fff 75%
-    );
-    background-size: 400% 400%;
-
-    /* --- ADDED THIS FOR COMPATIBILITY --- */
-    -webkit-background-clip: text;
-    background-clip: text; 
-    /* ------------------------------------ */
-
-    -webkit-text-fill-color: transparent;
-    animation: crystalShine 4s ease-in-out infinite;
-    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
-}
+        h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem); 
+            margin-bottom: 5px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: linear-gradient(
+                -45deg, 
+                #fff 25%, 
+                #00d4ff 40%, 
+                #fff 50%, 
+                #00d4ff 60%, 
+                #fff 75%
+            );
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            animation: crystalShine 4s ease-in-out infinite;
+            filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
+        }
 
         @keyframes crystalShine {
             0% { background-position: 0% 50%; }
@@ -101,12 +97,19 @@ h1 {
             font-size: clamp(0.9rem, 4vw, 1.2rem);
         }
 
-        img {
-            border-radius: 50%;
-            border: 4px solid #00d4ff;
-            box-shadow: 0 0 20px #00d4ff;
-            margin-bottom: 20px;
-            width: clamp(120px, 30vw, 160px); /* Responsive Image */
+        /* VIDEO STYLES */
+        .video-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-vid {
+            width: clamp(150px, 45vw, 280px); /* Responsive sizing */
+            border-radius: 15px; 
+            border: 3px solid #00d4ff;
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+            object-fit: cover;
         }
 
         p, li, .contact-info {
@@ -168,7 +171,12 @@ h1 {
         <h1>MANDHRAKANI M</h1>
         <div class="subtitle">STUDENT | FULL STACK DEVELOPER</div>
 
-        <img src="profile.png" alt="Profile Picture">
+        <div class="video-wrap">
+            <video autoplay muted loop playsinline class="profile-vid">
+                <source src="suthish video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
         <div class="section">
             <h3>ABOUT ME</h3>
