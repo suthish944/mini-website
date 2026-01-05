@@ -61,26 +61,31 @@
         }
 
         /* SHIMMERING CRYSTAL EFFECT */
-        h1 {
-            font-size: clamp(2rem, 8vw, 3.5rem); /* Responsive Font Size */
-            margin-bottom: 5px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            background: linear-gradient(
-                -45deg, 
-                #fff 25%, 
-                #00d4ff 40%, 
-                #fff 50%, 
-                #00d4ff 60%, 
-                #fff 75%
-            );
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: crystalShine 4s ease-in-out infinite;
-            filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
-        }
+h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem); 
+    margin-bottom: 5px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(
+        -45deg, 
+        #fff 25%, 
+        #00d4ff 40%, 
+        #fff 50%, 
+        #00d4ff 60%, 
+        #fff 75%
+    );
+    background-size: 400% 400%;
+
+    /* --- ADDED THIS FOR COMPATIBILITY --- */
+    -webkit-background-clip: text;
+    background-clip: text; 
+    /* ------------------------------------ */
+
+    -webkit-text-fill-color: transparent;
+    animation: crystalShine 4s ease-in-out infinite;
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
+}
 
         @keyframes crystalShine {
             0% { background-position: 0% 50%; }
